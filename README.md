@@ -26,7 +26,8 @@ func HandleRequest(w http.ResponseWriter, r *http.Request){
 ```go
 // 这里是我的事件要做的是
 func NotifySomeOneDoSomeThing(){
-    eventx.GlobalEmitter.On("session.assign_staff", func(data any) {
+  // 这里是要监听的事件 role.init是监听的信号
+    eventx.GlobalEmitter.On("role.init", func(data any) {
 		eventData := data.(map[string]any)
 		staff_id := eventData["staff_id"].(int64)
 		merchant_id := eventData["merchant_id"].(int64)
