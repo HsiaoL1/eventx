@@ -68,7 +68,7 @@ func PostAssignEvent() {
 		}
 
 		// 创建请求
-		req, err := http.NewRequestWithContext(ctx, "POST", "https://example.com/api/post/assign", bytes.NewBuffer(reqBody))
+		req, err := http.NewRequestWithContext(ctx, "POST", "http://127.0.0.1:8090/api/post/assign", bytes.NewBuffer(reqBody))
 		if err != nil {
 			slog.Error("Error creating request", "error", err)
 			return

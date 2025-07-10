@@ -12,3 +12,7 @@ package eventx
 func InitPostEvent() {
 	PostAssignEvent()
 }
+
+func init() {
+	InitPostEvent()
+}
